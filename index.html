@@ -1,13 +1,134 @@
-<!doctype html>
-<html lang="en" data-critters-container>
+<html>
+
 <head>
-  <meta charset="utf-8">
-  <title>Homepage</title>
-  <base href>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:wght@100;500&display=swap');
+
+        body {
+            font-family: 'Roboto';
+        }
+
+        .name-div {
+            font-size: 7em;
+            margin-bottom: 0% !important;
+        }
+
+        .sub-text-div {
+            font-size: 1.5em;
+            margin-bottom: 5% !important;
+        }
+
+        .info-div {
+            font-size: 1.5em;
+        }
+
+        span.information {
+            font-weight: 600;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #000000;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #000000;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        .container {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .dark-container {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script>
+        js_namespace = { lightMode: 1 };
+        function toggleDarkMode() {
+            // some logic to change the class on the body tag
+            if (js_namespace.lightMode === 1) {
+                js_namespace.lightMode = 0;
+                document.getElementsByTagName('body')[0].classList.add("dark-container");
+            } else {
+                js_namespace.lightMode = 1;
+                document.getElementsByTagName('body')[0].classList.remove("dark-container");
+            }
+        }
+    </script>
+    <title>Anirudh Gopal</title>
+</head>
+
 <body>
-  <app-root></app-root>
-<script src="runtime.f02d51c9cc7d0369.js" type="module"></script><script src="polyfills.38e5bc589f71f2df.js" type="module"></script><script src="main.5e631d2d0c652734.js" type="module"></script></body>
+    <div class="container">
+        <div>
+            <label class="switch">
+                <input type="checkbox" checked onclick='toggleDarkMode();'>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="name-div">Anirudh Gopal</div>
+        <div class="sub-text-div">Developer since 2015.</div>
+        <div class="info-div">City: <span class="information">Montreal, Quebec</span></div>
+        <div class="info-div">Organization: <span class="information">Morgan Stanley</span></div>
+        <div class="info-div">Social Media: <span class="information">LinkedIn, Instagram, Email</span></div>
+    </div>
+</body>
+
 </html>
