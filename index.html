@@ -98,6 +98,22 @@
             background-color: black;
             color: white;
         }
+
+        a:link,
+        a:visited {
+            color: #000000 !important;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline !important;
+        }
+
+        .dark-container a:link,
+        .dark-container a:visited {
+            color: white !important;
+            text-decoration: none;
+        }
     </style>
     <script>
         js_namespace = { lightMode: 1 };
@@ -126,8 +142,11 @@
         <div class="name-div">Anirudh Gopal</div>
         <div class="sub-text-div">Developer since 2015.</div>
         <div class="info-div">City: <span class="information">Montreal, Quebec</span></div>
-        <div class="info-div">Organization: <span class="information">Morgan Stanley</span></div>
-        <div class="info-div">Social Media: <span class="information">LinkedIn, Instagram, Email</span></div>
+        <div class="info-div">Organization: <span class="information"><a href="https://www.morganstanley.com/"
+                    target="_blank">Morgan Stanley</a></span></div>
+        <div class="info-div">Social Media: <span class="information"> <a
+                    href="https://ca.linkedin.com/in/anirudh-gopal-958964170" target="_blank">LinkedIn</a>, <a
+                    href="https://www.instagram.com/anirudhgopal14/" target="_blank">Instagram</a></span></div>
     </div>
 </body>
 
