@@ -8,6 +8,10 @@
             font-family: 'Roboto';
         }
 
+        div {
+            width: 100%;
+        }
+
         .name-div {
             font-size: 7em;
             margin-bottom: 0% !important;
@@ -15,7 +19,11 @@
 
         .sub-text-div {
             font-size: 1.5em;
+        }
+
+        .toggle-div {
             margin-bottom: 5% !important;
+            margin-top: 1%;
         }
 
         .info-div {
@@ -24,7 +32,7 @@
 
         span.information {
             font-weight: 600;
-            line-height: 3.5em;
+            line-height: 1.5em;
         }
 
         .switch {
@@ -134,14 +142,14 @@
 
 <body>
     <div class="container">
-        <div>
+        <div class="name-div">Anirudh Gopal</div>
+        <div class="sub-text-div">Developer since 2015.</div>
+        <div class="toggle-div">
             <label class="switch">
                 <input type="checkbox" checked onclick='toggleDarkMode();'>
                 <span class="slider round"></span>
             </label>
         </div>
-        <div class="name-div">Anirudh Gopal</div>
-        <div class="sub-text-div">Developer since 2015.</div>
         <div class="info-div">City:</div><div class="info-div"><span class="information">Montreal, Quebec</span></div>
         <div class="info-div">Organization: </div><div class="info-div"><span class="information"><a href="https://www.morganstanley.com/"
                     target="_blank">Morgan Stanley</a></span></div>
